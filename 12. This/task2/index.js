@@ -15,10 +15,10 @@ const bird = {
 }
 
 function makeDomestic(isDomestic) {
-    console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`);
-    this.type === "Собака" ? this.isDomestic = true : this.isDomestic = false;
-    return this
-
+    const newAnimal = { ...this };
+    console.log(`${newAnimal.type} по имени ${newAnimal.name} говорит ${newAnimal.makeSound()}`);
+    newAnimal.isDomestic = isDomestic || false;
+    return newAnimal;
 }
 
 console.log(makeDomestic.bind(dog, true)());
