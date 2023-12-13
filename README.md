@@ -1,1 +1,1 @@
-# module1
+# Junior frontend development
